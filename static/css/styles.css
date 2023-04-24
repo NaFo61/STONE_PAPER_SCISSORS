@@ -333,7 +333,6 @@ font-family: 'Rubik Mono One', sans-serif;
 
 .profile_fact_label{
     color: var(--white);
-    font-size: calc((3vh + 3vw) / 2);
 }
 
 /* Добавить Изображение */
@@ -353,7 +352,7 @@ font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     background-color: transparent;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 
     border-style:outset;
     border-width: 2px;
@@ -420,11 +419,13 @@ font-family: 'Rubik Mono One', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .profile_stats {
     width: 60vw;
     flex-direction: column;
+    margin-bottom: calc((2vh + 2vw) / 2);
 }
 
 .profile_stats_block1 {
@@ -462,4 +463,69 @@ font-family: 'Rubik Mono One', sans-serif;
 
 .profile_stats_block:hover {
     transform: scale(1.15);
+}
+
+.NotesFormFileInput {
+    display: none;
+}
+.NotesFormFileInput::-webkit-file-upload-button {
+    display: none;
+}
+
+.profile_file_input_label2 {
+    color: var(--white);
+    font-family: "Bungee";
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    color: #FEFFFF;
+}
+
+.NotesFormFileButton {
+    background-color: transparent;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #FEFFFF;
+
+    color: #FEFFFF;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: calc((1.8vh + 1.8vw) / 2);
+
+    /*transition: transform 0.3s, background-color 0.3s !important; /* Расширение кнопки */
+}
+.NotesFormFileButton:hover {
+    background-color: #FEFFFF;
+    border-color: #17252A;
+    color: crimson;
+    /*transform: scale(1.05);*/
+}
+
+.profile_stats_text {
+    color: var(--white);
+    font-family: "Bungee";
+    font-size: calc((1.5vh + 1.5vw) / 2);
+}
+
+.profile_stats_block0 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.profile_block_fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile_block_fact_label {
+    color: var(--white);
+    font-family: 'Pacifico', cursive;
+    font-size: calc((2vh + 2vw) / 2);
+}
+
+.description {
+    color: var(--white);
+    font-family: 'Pacifico', cursive;
+    font-size: calc((1.5vh + 1.5vw) / 2);
 }

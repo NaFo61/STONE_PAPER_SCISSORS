@@ -183,8 +183,8 @@ def profile():
             return redirect(url_for('logout'))
     except Exception as e:
         print(CriticalErrorException('>>> Critical Error'))
-        # return render_template('profile.html', user_login=current_user.login, stats1=stats1,
-        #                        stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact)
+        return render_template('profile.html', user_login=current_user.login, stats1=stats1,
+                               stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact)
     return render_template('profile.html', user_login=current_user.login, stats1=stats1,
                            stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact)
 
