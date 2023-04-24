@@ -490,17 +490,13 @@ font-family: 'Rubik Mono One', sans-serif;
     font-size: calc((1.8vh + 1.8vw) / 2);
 
     /*transition: transform 0.3s, background-color 0.3s !important; /* Расширение кнопки */
-
-.Avatar {
+}
+.Avat {
     height: 10vh;
-    width: calc(10vh + 10vw) / 5;
-}
-.AvatarHeader {
-    display: flex;
-    align-items: center;
+    max-width: calc(20vh + 20vw) / 2;
 }
 
-}
+
 .NotesFormFileButton:hover {
     background-color: #FEFFFF;
     border-color: #17252A;
