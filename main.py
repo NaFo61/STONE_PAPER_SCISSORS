@@ -184,9 +184,10 @@ def profile():
     except Exception as e:
         print(CriticalErrorException('>>> Critical Error'))
         return render_template('profile.html', user_login=current_user.login, stats1=stats1,
-                               stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact)
+                               stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact, picture=f"../static/avatars/{current_user.avatar}")
     return render_template('profile.html', user_login=current_user.login, stats1=stats1,
-                           stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact)
+                           stats2=stats2, stats3=stats3, stats4=stats4, stats5=stats5, fact=fact,
+                           picture=f"../static/avatars/{current_user.avatar}")
 
 @app.route('/upload', methods=['POST', 'GET'])
 @login_required

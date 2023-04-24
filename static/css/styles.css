@@ -97,7 +97,7 @@ font-family: 'Rubik Mono One', sans-serif;
     color: var(--white);
     font-size: 12vh;
     margin: 0;
-    
+
     background: linear-gradient(160deg, #6F2232, #ff0066, #d80d17, #ff0066, #6F2232); /* Цвет фона */
     background-size: 400%;
     -webkit-text-fill-color: transparent;
@@ -394,7 +394,7 @@ font-family: 'Rubik Mono One', sans-serif;
     height: calc((3vw + 3vh) / 2);
 
     font-size: calc((1.5vh + 1.5vw) / 2);
-    
+
     display: flex;
     background-color: transparent;
     align-items: center;
@@ -442,7 +442,7 @@ font-family: 'Rubik Mono One', sans-serif;
 .profile_stats_block {
     background-color: var(--gray2);
     border-color: var(--lightblue);
-    
+
     width: calc((10vh + 20vw) / 2);
     height: calc((15vh + 15vw) / 2);
 
@@ -490,6 +490,16 @@ font-family: 'Rubik Mono One', sans-serif;
     font-size: calc((1.8vh + 1.8vw) / 2);
 
     /*transition: transform 0.3s, background-color 0.3s !important; /* Расширение кнопки */
+
+.Avatar {
+    height: 10vh;
+    width: calc(10vh + 10vw) / 5;
+}
+.AvatarHeader {
+    display: flex;
+    align-items: center;
+}
+
 }
 .NotesFormFileButton:hover {
     background-color: #FEFFFF;
