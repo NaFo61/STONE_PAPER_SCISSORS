@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="login_mainblock">
+    <div class="login_block_content">
+        <form class="login_block_content_form" method="post" name="login_block_content_form">
+            <!--  Username  -->
+            <div class="login_form_username">
+                <label class="login_form_text">Email:</label>
+                <br>
+                <input class="login_form_input" type="'text" name="Email" placeholder="Введите Ваш Email">
+            </div>
+            <br>
+            <!--  Логин  -->
+            <div class="login_form_password">
+                <label class="login_form_text">Password:</label>
+                <br>
+                <input class="login_form_input" type="'text" name="Password" placeholder="Введите Ваш Пароль">
+            </div>
+            <br>
+            <!--  Войти в Аккаунт  -->
+            <input class="login_form_submit" type="submit" name="LoginSubmit" value="Войти В Аккаунт">
+            <br>
+            <!--  Нет Аккаунта - Регистрация  -->
+            <label class="login_form_text">Don't have an account? Register!</label>
+            <button class="login_form_button" name="RegistrationButton">Зарегистрироваться</button>
+        </form>
+    </div>
+
+</main>
+{% endblock %}

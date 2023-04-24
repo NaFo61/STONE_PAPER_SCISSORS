@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main class="registration_mainblock">
+    <div class="registration_block_content">
+        <form class="registration_block_content_form" method="post" name="registration_block_content_form">
+            <!--  Email  -->
+            <div class="registration_form_email">
+                <labeL class="registration_form_text">Email:</labeL>
+                <br>
+                <input class="registration_form_input" type="email" name="Email" placeholder="Введите Вашу Почту">
+            </div>
+            <br>
+            <!--  Username  -->
+            <div class="registration_form_username">
+                <label class="registration_form_text">Login:</label>
+                <br>
+                <input class="registration_form_input" type="'text" name="Login" placeholder="Введите Ваш Логин">
+            </div>
+            <br>
+            <!--  Логин  -->
+            <div class="registration_form_password">
+                <label class="registration_form_text">Password:</label>
+                <br>
+                <input class="registration_form_input" type="'text" name="Password" placeholder="Введите Ваш Пароль">
+            </div>
+            <br>
+            <!--  Регистрация  -->
+            <button class="registration_form_button" name="RegistrationButton">Зарегистрироваться</button>
+            <br>
+            <button class="registration_form_button" name="ReturnButton">Назад</button>
+        </form>
+    </div>
+
+</main>
+{% endblock %}

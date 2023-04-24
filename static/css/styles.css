@@ -1,0 +1,465 @@
+:root {
+    --black: #1A1A1D;
+    --gray: #4E4E50;
+    --red1: #6F2232;
+    --red2: #950740;
+    --red3: #C3073F;
+    --white: rgb(255, 255, 255);
+
+    --black2:#0B0C10;
+    --gray2:#1F2833;
+    --lightgray: #C5C6C7;
+    --lightblue: #66FCF1;
+    --shadowblue: #45A29E;
+}
+
+body {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--black);
+    margin: 0;
+    height: 100vh;
+}
+
+/*
+font-family: 'Bungee', cursive;
+font-family: 'Rubik Mono One', sans-serif;
+*/
+
+/* Main */
+.main_header {
+    padding: 20px 100px;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: var(--red1);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Logo - небольшое */
+.main_logo {
+    font-family: 'Bungee';
+    font-size: 3em;
+    color: var(--white);
+    margin: 0;
+}
+
+/* Кнопка Login */
+.main_header_button {
+    width: 9vw;
+    height: 7vh;
+    background: transparent;
+    border-radius: 5px;
+    border-color: var(--white);
+    color: var(--white);
+
+    font-family: 'Bungee';
+    font-size: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s, background-color 0.3s !important; /* Расширение кнопки */
+}
+
+.main_header_button:hover {
+    color: var(--white);
+    background-color: var(--red3);
+    transform: scale(1.25);
+}
+
+/* Лого - большое */
+.main_main_block{
+    width: 100%;
+    height: 85vh;
+}
+.main_block_content{
+    padding-top: calc(60vh / 2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+@font-face {
+    src: url(../fonts/CROOKED.woff);
+    font-family: 'CROOKED-Bold';
+}
+.main_content_text {
+    font-family: 'CROOKED-Bold';
+    color: var(--white);
+    font-size: 12vh;
+    margin: 0;
+    
+    background: linear-gradient(160deg, #6F2232, #ff0066, #d80d17, #ff0066, #6F2232); /* Цвет фона */
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: animate 10s linear infinite reverse;
+
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    50% {
+        background-position: 200%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}
+
+/*  Стили Страницы Логин  */
+.login_mainblock {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_block_content {
+    max-width: 25vw;
+    max-height:70vh;
+    background-color: var(--gray);
+    padding: 1vh;
+    border-radius: 5px;
+    border-color: var(--white);
+    transition: transform 1s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.login_block_content:hover {
+    transform: scale(1.15); /* Не нужна анимация - убрать */
+}
+
+.login_block_content_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_form_text {
+    color: var(--white);
+    font-family: 'Bungee';
+    font-size: 1.5vh;
+}
+
+.login_form_button {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((1.5vw + 1.5vh) / 2);
+    background-color: var(--red2);
+    color: var(--white);
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.login_form_submit {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((1.5vw + 1.5vh) / 2);
+    background-color: var(--red2);
+    color: var(--white);
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+.login_form_button:hover {
+    transform: scale(1.1);
+}
+
+.login_form_submit:hover {
+    transform: scale(1.1);
+}
+
+.login_form_input {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((1vw + 1vh) / 2);
+    border-radius: 5px;
+    border-color: var(--black);
+    color: black;
+}
+
+/*  Стили Страницы Регистрация  */
+.registration_mainblock {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registration_block_content {
+    max-width: 25vw;
+    max-height:70vh;
+    background-color: var(--gray);
+    padding: 1vh;
+    border-radius: 5px;
+    border-color: var(--white);
+    transition: transform 1s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.registration_block_content:hover {
+    transform: scale(1.15); /* Не нужна анимация - убрать */
+}
+
+.registration_block_content_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registration_form_text {
+    color: var(--white);
+    font-family: 'Bungee';
+    font-size: 1.5vh;
+}
+
+.registration_form_button {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((1.5vw + 1.5vh) / 2);
+    background-color: var(--red2);
+    color: var(--white);
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.registration_form_input {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((1vw + 1vh) / 2);
+    border-radius: 5px;
+    border-color: var(--black);
+    color: black;
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.registration_form_button:hover {
+    transform: scale(1.1);
+}
+
+.registration_form_input:hover {
+    transform: scale(1.1);
+}
+
+/* Game */
+.game_header_label {
+    color: var(--white);
+    font-family: "Bungee";
+    font-size: calc((3vh + 3vw) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.game_mainblock {
+    width: 100%;
+    height: 100vh
+}
+
+.game_block_content {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game_block_settings {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.game_block_user {
+    background-color: var(--lightblue);
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.game_block_bot {
+    background-color: var(--red3);
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.game_form_items {
+    display: flex;
+    justify-content: space-evenly;
+}
+.game_button_item {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((5vw + 5vh) / 2);
+
+    background-color: var(--gray2);
+    border-color: var(--lightblue);
+    border-radius: 10px;
+
+    color: var(--lightblue);
+    font-family: 'Bungee';
+    font-size: calc((2vw + 2vh) / 2);
+
+    padding: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.game_button_item:hover {
+    transform: scale(1.10);
+}
+
+/* PROFILE */
+
+
+
+
+.profile_fact_label{
+    color: var(--white);
+    font-size: calc((3vh + 3vw) / 2);
+}
+
+/* Добавить Изображение */
+.profile_file_input {
+    display: none;
+}
+
+.profile_file_input::-webkit-file-upload-button {
+    display: none;
+}
+.profile_file_input_form {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((3vw + 3vh) / 2);
+
+    font-size: calc((1.5vh + 1.5vw) / 2);
+
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+
+    border-style:outset;
+    border-width: 2px;
+    border-radius: 5px;
+    color: var(--white);
+    border-color: var(--white);
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+    font-family: "Bungee";
+}
+.profile_file_input_form:hover {
+    transform: scale(1.15);
+    background-color: var(--red3);
+}
+
+
+/* FILE */
+
+.profile_header {
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--red1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.profile_header_label {
+    color: var(--white);
+    font-family: "Bungee";
+    font-size: calc((3vh + 3vw) / 2);
+}
+
+.profile_header_button {
+    width: calc((20vw + 20vh) / 2);
+    height: calc((3vw + 3vh) / 2);
+
+    font-size: calc((1.5vh + 1.5vw) / 2);
+    
+    display: flex;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+    color: var(--white);
+    border-color: var(--white);
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+    font-family: "Bungee";
+}
+
+.profile_header_button:hover {
+    transform: scale(1.15);
+    background-color: var(--red3);
+}
+
+.profile_main {
+    width: 100vw;
+    height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_stats {
+    width: 60vw;
+    flex-direction: column;
+}
+
+.profile_stats_block1 {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+
+.profile_stats_block2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile_stats_block {
+    background-color: var(--gray2);
+    border-color: var(--lightblue);
+    
+    width: calc((10vh + 20vw) / 2);
+    height: calc((15vh + 15vw) / 2);
+
+    border-width:2px;
+    border-style:solid;
+    border-radius: 10px;
+
+    color: var(--lightblue);
+    font-family: 'Bungee';
+    font-size: calc((2vw + 2vh) / 2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s, background-color 0.3s !important; /* Не нужна анимация - убрать */
+}
+
+.profile_stats_block:hover {
+    transform: scale(1.15);
+}

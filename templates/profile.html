@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="profile_header">
+    <label class="profile_header_label">{{ user_login }}</label>
+    <form method="post">
+        <button class="profile_header_button" name="profile_button_return">BACK</button>
+    </form>
+    <form method="post">
+        <button class="profile_header_button" name="profile_button_logout">LOGOUT</button>
+    </form>
+
+    <form class="profile_file_input_form" method="post">
+        <input class="profile_file_input" id="image" type="file">
+        <label class="profile_file_input_label" for="image">AVATAR</label>
+    </form>
+    <form action="{{ url_for('upload') }}" class="NotesFormProfileImgUpdate" method="POST" enctype=multipart/form-data>
+	    <input class="NotesFormFileInput" type="file" id="image" name="file" accept=".jpg, .jpeg, .png">
+        <label class="NotesFormFileLabel" for="image">Аватарка</label>
+        <input class="NotesFormFileButton" type=submit value="Сохранить">
+    </form>
+
+</header>
+
+<main class="profile_main">
+    <div class="profile_stats">
+        <div class="profile_stats_block1">
+            <div class="profile_stats_block">
+                <label class="profile_stats_parametres">WINS</label>
+                <p class="profile_stats_parametres">{{ stats1 }}</p>
+            </div>
+            <div>
+                <label class="profile_fact_label">Интересный факт с числом побед:</label>
+                <br>
+                <label class="profile_fact_label">{{ fact }}</label>
+            </div>
+        </div>
+        <div class="profile_stats_block1">
+        
+            <div class="profile_stats_block">
+                <label class="profile_stats_parametres">DRAWS</label>
+                <p class="profile_stats_parametres">{{ stats2 }}</p>
+            </div>
+
+            <div class="profile_stats_block">
+                <label class="profile_stats_parametres">LOSES</label>
+                <p class="profile_stats_parametres">{{ stats3 }}</p>
+            </div>
+
+        </div>
+
+        <div class="profile_stats_block2">
+            <div class="profile_stats_block">
+                <label class="profile_stats_parametres">KD</label>
+                <p class="profile_stats_parametres">{{ stats5 }}</p>
+            </div>
+            <div class="profile_stats_block">
+                <label class="profile_stats_parametres">GAMES</label>
+                <p class="profile_stats_parametres">{{ stats4 }}</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

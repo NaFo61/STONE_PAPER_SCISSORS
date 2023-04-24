@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="game_mainblock">
+    <label class="game_header_label">{{ result_of_game }}</label>
+    <div class="game_block_content">
+        <!--  Пользователь -->
+        <div class="game_block_user">
+            <img src="{{ user_item }}" class="game_item">
+        </div>
+        <!--  Бот -->
+        <div class="game_block_bot">
+            <img src="{{ bot_item }}" class="game_item">
+        </div>
+    </div>
+    <!--  Общее -->
+    <div class="game_block_settings">
+        <form class="game_form_items" method="post">
+            <button class="game_button_item" name="game_button_item_rock">Rock</button>
+            <button class="game_button_item" name="game_button_item_paper">Paper</button>
+            <button class="game_button_item" name="game_button_item_scissors">Scissors</button>
+        </form>
+        <br>
+        <form method="post">
+            <button class="game_button_item" name="game_button_profile">Profile</button>
+        </form>
+    </div>
+</main>
+{% endblock %}
