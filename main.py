@@ -23,7 +23,7 @@ api.add_resource(UsersResource, '/api/users/<int:user_id>')
 
 app.config['SECRET_KEY'] = 'NaFo'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///website.db'
-UPLOAD_FOLDER = "Z:/PycharmProjects/flask/Project_2/static/avatars"
+UPLOAD_FOLDER = "Z:/PycharmProjects/flask/STONE_PAPER_SCISSORS/static/avatars"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 login_manager = LoginManager(app=app)
 
